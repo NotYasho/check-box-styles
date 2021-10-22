@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+@keyframes hueChange {
+	0% {
+		color: rgb(187, 255, 0);
+		text-shadow: 0 0 10px rgba(166, 255, 0, 0.685);
+	}
+	14.28% {
+		color: rgb(0, 238, 255);
+		text-shadow: 0 0 6px rgba(0, 255, 242, 0.397);
+	}
+	28.56% {
+		color: rgb(234, 5, 255);
+		text-shadow: 0 0 5px rgba(255, 0, 200, 0.61);
+	}
+	42.84% {
+		color: rgb(255, 174, 0);
+		text-shadow: 0 0 7px rgba(255, 187, 0, 0.521);
+	}
+	57.12% {
+		color: rgb(168, 255, 87);
+		text-shadow: 0 0 10px rgba(0, 255, 13, 0.384);
+	}
+	71.4% {
+		color: rgb(87, 193, 255);
+		text-shadow: 0 0 10px rgba(0, 132, 255, 0.438);
+	}
+	85.68% {
+		color: rgb(174, 0, 255);
+		text-shadow: 0 0 15px rgba(89, 0, 255, 0.418);
+	}
+	100% {
+		color: rgb(187, 255, 0);
+		text-shadow: 0 0 10px rgba(166, 255, 0, 0.685);
+	}
+}
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background: rgb(25, 21, 37);
+}
+label {
+	position: relative;
+	width: 160px;
+	height: 80px;
+	cursor: pointer;
+}
+
+label input {
+	position: relative;
+	appearance: none;
+}
+
+label span {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #ff0040;
+	border-radius: 80px;
+	transition: 0.3s ease-in-out;
+	box-shadow: 0 5px 25px #ff0040a6;
+}
+label input:checked ~ span {
+	background-color: rgb(60, 255, 0);
+	box-shadow: 0 5px 25px #9dff00a6;
+}
+
+label span i {
+	position: absolute;
+	top: 4px;
+	left: 4px;
+	width: 72px;
+	height: 72px;
+	background: rgb(255, 214, 233);
+	border-radius: 50%;
+	box-shadow: 0 0px 2px white;
+	transition: 0.3s ease-in-out;
+}
+
+label input:checked ~ span i {
+	left: 84px;
+	background: rgb(232, 255, 230);
+	box-shadow: 0 0px 5px white;
+}
+label span i::before {
+	content: '';
+	position: absolte;
+}
+
+label input:checked:hover ~ span {
+	background-color: rgb(46, 224, 2);
+	box-shadow: 0 5px 25px rgba(51, 255, 0, 0.637);
+}
+label input:checked:hover ~ span i {
+	background-color: rgba(236, 236, 236, 0.699);
+}
+
+label span:hover {
+	background: #df0043;
+	box-shadow: 0 5px 25px #df0025c0;
+}
+label input:hover ~ span i {
+	background: rgba(219, 219, 219, 0.733);
+}
+h1 {
+	position: absolute;
+	top: 180px;
+	font-family: Poppins;
+	color: rgba(255, 255, 255, 0.555);
+    animation: none;
+    cursor: pointer;
+}
+.active{
+    animation: hueChange 8s infinite;
+}
