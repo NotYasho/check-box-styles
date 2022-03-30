@@ -1,3 +1,3 @@
 # CSS Checkbox Toggle
 
-Preview on [Github Pages](https://yasho022.github.io/check-box-styles/)
+Preview on [Github Pages](https://notyasho.github.io/check-box-styles/)
